@@ -1,0 +1,10 @@
+- pending enquiries, joined members, add member, workout list media query
+- nav bar media query
+- gallery media query
+- message api
+- dashboard
+- calculator
+- remove dead code
+- learn hosting
+
+sass --watch style.scss:style.min.css --style compressed
