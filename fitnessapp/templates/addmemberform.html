@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bash Fitness</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, datta able, datta able bootstrap admin template, free admin theme, free dashboard template"/>
+    <meta name="author" content="CodedThemes"/>
+
+    <!-- Favicon icon -->
+    <link href="./static/img/favicon.png" rel="icon">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="./static/assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="./static/assets/plugins/animation/css/animate.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="./static/assets/css/style.css">
+
+</head>
+<style>
+    .navbar-collapse .welcome_style{
+        padding-left: 33px;
+        padding-top: 30px;
+    }
+
+    @media (min-width:1200px){
+        .pcoded-navbar .mobile-menu span{
+            display: none;
+        }
+    }
+
+    .topnav {
+    overflow: hidden;
+    margin-bottom: 20px;
+    }
+
+    .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    }
+
+    .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    }
+
+    .topnav a.active {
+    background-color: #2196F3;
+    color: white;
+    }
+
+    .topnav .search-container {
+    float: left;
+    width: 100%;
+    }
+
+    .topnav input[type=text] {
+    padding: 11px;
+    margin-top: 8px;
+    font-size: 16px;
+    border: none;
+    }
+
+    .topnav .search-container button {
+    float: right;
+    padding: 9px 10px;
+    margin-top: 9px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    }
+
+    .topnav .search-container button:hover {
+    background: #ccc;
+    }
+
+    @media screen and (max-width: 600px) {
+    .topnav .search-container {
+        float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .topnav input[type=text] {
+        border: 1px solid #ccc;  
+    }
+    }
+
+    #success-form {
+        display: none;
+    }
+</style>
+
+<body>
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar">
+        <div class="navbar-wrapper">
+            <div class="navbar-brand header-logo">
+                <a href="index.html" class="b-brand">
+                    <img src="../../static/img/logo.png" style="height: 50px; width: 50px;">
+                    <span class="b-title">Bash Fitness</span>
+                </a>
+                <a class="mobile-menu" id="mobile-collapse"><span></span></a>
+            </div>
+            <div class="navbar-content scroll-div" style="margin-top: 25px;">
+                <ul class="nav pcoded-inner-navbar">
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Navigation</label>
+                    </li>
+                    <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
+                        <a href="/dashboard" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Member Info</label>
+                    </li>
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item">
+                        <a href="pendingenquiries" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Pending Enquiries</span></a>
+                    </li>
+                    <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item">
+                        <a href="joinedmembers" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Joined Members</span></a>
+                    </li>
+                    <li data-username="Table bootstrap datatable footable" class="nav-item active">
+                        <a href="/addmember" class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext">Add Member</span></a>
+                    </li>
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Packages Info</label>
+                    </li>
+                    <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a href="/workouts" class="nav-link "><span class="pcoded-micon"><i class="feather icon-star"></i></span><span class="pcoded-mtext">Workouts list</span></a>
+                    </li>
+                    <li class="nav-item pcoded-menu-caption">
+                        <label></label>
+                    </li>
+                    <li data-username="" class="nav-item"><a href="/logout" class="nav-link"><span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Logout</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light">
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse1"><span></span></a>
+            <a href="index.html" class="b-brand">
+                <img src="../../static/img/logo.png" style="height: 50px; width: 50px;">
+                <span class="b-title">Bash Fitness</span>
+            </a>
+        </div>
+        <a class="mobile-menu" id="mobile-header">
+            <i class="feather icon-more-horizontal"></i>
+        </a>
+    </header>
+    <!-- [ Header ] end -->
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="container py-5" style="background: #dadada96;">
+                            <div id="add-form">
+                                <div class="d-flex flex-column text-center mb-5">
+                                    <h4 class="text-primary font-weight-bold">BASIC DETAILS</h4>
+                                </div>
+                                <form id="form2">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="nameInput"><b>Name</b><span class="text-danger">*</span></label>
+                                          <input type="text" class="form-control" id="nameInput" placeholder="Name" value="" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="mobileInput"><b>Contact</b><span class="text-danger">*</span></label>
+                                          <input type="text" class="form-control" id="mobileInput" placeholder="Contact" value="" required>
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="emailInput"><b>Email</b><span class="text-danger">*</span></label>
+                                          <input type="email" class="form-control" id="emailInput" placeholder="Email" value="" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="addressInput"><b>Address</b><span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="addressInput" placeholder="Address" value="" required>
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-5">
+                                          <label for="cityInput"><b>City</b><span class="text-danger">*</span></label>
+                                          <input type="text" class="form-control" id="cityInput" value="Coimbatore" required>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                          <label for="stateInput"><b>State</b></label>
+                                          <select id="stateInput" class="form-control">
+                                            <option selected>TamilNadu</option>
+                                            <option>Kerala</option>
+                                            <option>Karnataka</option>
+                                            <option>Andhra Pradesh</option>
+                                          </select>
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                          <label for="pincodeInput"><b>Pincode</b><span class="text-danger">*</span></label>
+                                          <input type="number" class="form-control" id="pincodeInput" placeholder="Pincode" required>
+                                        </div>
+                                      </div>
+                                      <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                              <label for="ageInput"><b>Birthday</b><span class="text-danger">*</span></label>
+                                              <input type="date" class="form-control" id="ageInput" placeholder="Birthday" required>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                              <label for="genderInput"><b>Gender</b><span class="text-danger">*</span></label>
+                                              <select id="genderInput" class="form-control">
+                                                <option selected>Male</option>
+                                                <option>Female</option>
+                                              </select>
+                                            </div>
+                                      </div>
+                                      <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                              <label for="occupationInput"><b>Occupation</b><span class="text-danger">*</span></label>
+                                              <input type="text" class="form-control" id="occupationInput" placeholder="Occupation" required>
+                                          </div>
+                                          <div class="form-group col-md-6">
+                                              <label for="bloodGroupInput"><b>Blood group</b><span class="text-danger">*</span></label>
+                                              <input type="text" class="form-control" id="bloodGroupInput" placeholder="Blood group" required>
+                                          </div>
+                                      </div>
+                                      <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                              <label for="emergencyInput"><b>Emergency contact</b><span class="text-danger">*</span></label>
+                                              <input type="text" class="form-control" id="emergencyInput" placeholder="Emergency contact" required>
+                                          </div>
+                                          <div class="form-group col-md-6">
+                                              <label for="modeInput"><b>Mode of Training required</b></label>
+                                              <select id="modeInput" class="form-control">
+                                                  <option selected>Offline</option>
+                                                  <option>Online</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                      <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                              <label for="photoInput"><b>Upload photo</b> (Please upload your full photo - Max size: 500KB)
+                                                  <i style="cursor: pointer;" type="reset" class="fa fa-trash" id="remove-photo"></i>
+                                              </label>
+                                              <input type="file" class="form-control" id="photoInput" name="photoInput" accept=".png, .jpg, .jpeg">
+                                              <p id="photo-warning" class="text-danger"></p>
+                                          </div>
+                                      </div>
+                                    <div class="d-flex flex-column text-center my-5">
+                                        <h4 class="text-primary font-weight-bold">FITNESS QUESTIONARY</h4>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="heightInput"><b>Height(in Cms)</b><span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" id="heightInput" placeholder="Height" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="weightInput"><b>Weight(in Kgs)</b><span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" id="weightInput" placeholder="Weight" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="workingHoursInput"><b>Working hours</b><span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" id="workingHoursInput" placeholder="Working hours" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="sleepingTimeInput"><b>Sleeping Time</b><span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" id="sleepingTimeInput" placeholder="Sleeping Time" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="alreadyGymInput"><b>Have you been to gym already?</b><span class="text-danger">*</span></label>
+                                        <select id="alreadyGymInput" class="form-control" style="width: 50%;">
+                                            <option selected>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                    </div>
+                                    <label for="diseaseInput"><b>Have you been told that you have any of these?</b><span class="text-danger">*</span></label>
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="disease1" value="High blood pressure">
+                                            <label class="form-check-label" for="disease1">High blood pressure</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="disease2" value="High Cholestrol">
+                                            <label class="form-check-label" for="disease2">High Cholestrol</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="disease3" value="High blood sugar">
+                                            <label class="form-check-label" for="disease3">High blood sugar</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="disease4" value="None">
+                                            <label class="form-check-label" for="disease4">None</label>
+                                        </div>
+                                    </div>
+                                    <label for="backPainInput"><b>Do you have any back pain or spine disorder?</b><span class="text-danger">*</span></label>
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="backPainRadio" id="backPain1" value="Yes" required>
+                                            <label class="form-check-label" for="backPain1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="backPainRadio" id="backPain2" value="No">
+                                            <label class="form-check-label" for="backPain2">No</label>
+                                        </div>
+                                    </div>
+                                    <label for="touchedInput"><b>Are you sensitive to be touched or pressurised in any area?</b><span class="text-danger">*</span></label>
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="touchRadio" id="touch1" value="Yes" required>
+                                            <label class="form-check-label" for="touch1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="touchRadio" id="touch2" value="No">
+                                            <label class="form-check-label" for="touch2">No</label>
+                                        </div>
+                                    </div>
+                                    <label for="smokeInput"><b>Do you smoke cigarettes?</b><span class="text-danger">*</span></label>
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="smokeRadio" id="smoke1" value="Yes" required>
+                                            <label class="form-check-label" for="smoke1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="smokeRadio" id="smoke2" value="No">
+                                            <label class="form-check-label" for="smoke2">No</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="oftenInput"><b>How often do you smoke?</b></label>
+                                        <select id="oftenInput" class="form-control" style="width: 50%;" disabled>
+                                            <option selected>Daily</option>
+                                            <option>Alternate days</option>
+                                            <option>Weekly once</option>
+                                            <option>very rarely</option>
+                                        </select>
+                                    </div>
+                                    <label for="injuryInput"><b>Do you have any present/past injury or done any surgery?</b><span class="text-danger">*</span></label>
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="injuryRadio" id="c" value="Yes" required>
+                                            <label class="form-check-label" for="injury1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="injuryRadio" id="injury2" value="No">
+                                            <label class="form-check-label" for="injury2">No</label>
+                                        </div>
+                                    </div>
+                                    <label for="sleepInput"><b>Do you have any difficulty in sleeping?</b><span class="text-danger">*</span></label>
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="sleepRadio" id="sleep1" value="Yes" required>
+                                            <label class="form-check-label" for="sleep1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="sleepRadio" id="sleep2" value="No">
+                                            <label class="form-check-label" for="sleep2">No</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exerciseLevelInput"><b>Select your current physical activity or exercise level</b><span class="text-danger">*</span></label>
+                                        <select id="exerciseLevelInput" class="form-control" style="width: 50%;">
+                                            <option selected>None</option>
+                                            <option>Light</option>
+                                            <option>Moderate</option>
+                                            <option>Vigorous</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="frequencyInput"><b>Frequency of exercise (session per week)</b></label>
+                                          <input type="number" class="form-control" id="frequencyInput" placeholder="Frequency" disabled>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="durationInput"><b>Duration of exercise (hours per week)</b></label>
+                                          <input type="number" class="form-control" id="durationInput" placeholder="Duration" disabled>
+                                        </div>
+                                    </div>
+                                    <label for="medicationInput"><b>Are you currently taking a prescribed medication for any medical condition?</b><span class="text-danger">*</span></label>
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="medicationRadio" id="medication1" value="Yes" required>
+                                            <label class="form-check-label" for="medication1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="medicationRadio" id="medication2" value="No">
+                                            <label class="form-check-label" for="medication2">No</label>
+                                        </div>
+                                    </div>
+                                    <label for="goalInput"><b>What is your fitness goal?</b><span class="text-danger">*</span></label>
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="goal1" value="Endurance">
+                                            <label class="form-check-label" for="goal1">Endurance</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="goal2" value="Strength">
+                                            <label class="form-check-label" for="goal2">Strength</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="goal3" value="Increase cardio-vascular capacity">
+                                            <label class="form-check-label" for="goal3">Increase cardio-vascular capacity</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="goal4" value="Increase flexibility">
+                                            <label class="form-check-label" for="goal4">Increase flexibility</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="goal5" value="General fitness">
+                                            <label class="form-check-label" for="goal5">General fitness</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="goal6" value="Weight Loss">
+                                            <label class="form-check-label" for="goal6">Weight Loss</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="goal7" value="Weight Gain">
+                                            <label class="form-check-label" for="goal7">Weight Gain</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="goal8" value="Others">
+                                            <label class="form-check-label" for="goal8">Others</label>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-center text-center my-5">  
+                                        <button type="submit" class="btn btn-primary d-inline ml-3">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="success-form">
+                                <div class="d-flex justify-content-center">
+                                    <h4 id="success-msg" class="display-5"></h4>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button id="back-to-form" class="btn btn-primary mt-3"><i class="fas fa-arrow-left"></i>&nbsp;Back to form</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- form end -->
+    <script src="./static/assets/js/vendor-all.min.js"></script>
+	<script src="./static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./static/assets/js/pcoded.min.js"></script>
+    <script src="../../static/js/dashboard.js"></script>
+</body>
+
+</html>

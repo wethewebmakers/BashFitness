@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="./static/img/favicon.png" rel="icon">
+  <link href="./static/css/login.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<!-- //web font -->
+</head>
+
+<body>
+  <div class="back-to-website">
+    <a href="/"><i class="fa fa-angle-left"></i>&nbsp;Back to website</a>
+  </div>
+  <div class="login-logo">
+    <img src="../../static/img/logo.png" style="height: 150px; width: 150px;">
+  </div>
+  <h3 class="logintxt">Login</h3>
+  <div class="login-page">
+    <div class="form">
+      <form action="admin" class="login-form" method="POST">
+        <input type="username" name="username" #email formControlName="emailctrl" placeholder="Username" maxlength="20" pattern="^[a-zA-Z0-9]*" required /><br>
+        <div *ngIf="emailid['emailctrl'].touched && emailid['emailctrl'].invalid" class="show-error">      
+        <input type="password" name="password" #password formControlName="passctrl" placeholder="Password" maxlength="15" required/>
+        <div *ngIf="emailid['passctrl'].touched && emailid['passctrl'].invalid" class="show-error">
+        <button type="submit">login</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./static/assets/js/vendor-all.min.js"></script>
+  <script src="./static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./static/assets/js/pcoded.min.js"></script>
+</body>
+
+<ngx-spinner type="ball-scale-multiple" style="color:white">Loading...</ngx-spinner>
+</html>

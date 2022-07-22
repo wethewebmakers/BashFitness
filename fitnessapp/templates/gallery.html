@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bash Fitness</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="./static/img/favicon.png" rel="icon">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="./static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="./static/css/style.min.css" rel="stylesheet">
+
+</head>
+<style>
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+ 
+</style>
+
+<body style="background-color: #f2f2f2">
+    <!-- WA-widget -->
+    <div id="wa-widget"><i class="fab fa-whatsapp"></i></div>
+    <div class="wa-chat-box">
+        <div class="wa-header">
+        <img class="wa-brand" src="../../static/img/logo.png">
+        <div class="wa-brand-text">
+            <div class="wa-brand-name">Bash Fitness</div>
+            <div class="wa-brand-subtitle">Ask us anything!</div>
+            <div class="wa-close">x</div>
+        </div>
+        </div>
+        <div class="wa-content">
+        <div class="wa-content-chat">
+            <div class="wa-content-chat-brand">Bash Fitness</div>
+            <div class="wa-content-chat-message">Hi there!<br>Reach us out with any queries.</div>
+        </div>
+        </div>
+        <div class="wa-send">
+        <a href="https://wa.me/+917540088121" target="_blank" style="text-decoration: none;" class="wa-send-button"><i id="send-logo" class="fab fa-whatsapp"></i>Start Chat</a>
+        </div>
+    </div>
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+            <a href="#" class="navbar-brand logo-group">
+                <img src="../../static/img/logo.png" class="logo-img">
+                <h1 class="m-0 display-5 font-weight-bold text-danger logo-name">BASH&nbsp;</h1>
+                <h1 class="m-0 display-5 font-weight-bold text-white">FITNESS</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto p-4 bg-secondary">
+                    <a href="/" class="nav-item nav-link">Home</a>
+                    <a href="about" class="nav-item nav-link">About Us</a>
+                    <a href="gallery" class="nav-item nav-link active">Gallery</a>
+                    <a href="joinus" class="nav-item nav-link">Join Us</a>
+                    <a href="contact" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+            <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-bold">Gallery</h4>
+            <div class="d-inline-flex">
+                <p class="m-0 text-white"><a class="text-white" href="/">Home</a></p>
+                <p class="m-0 text-white px-2">/</p>
+                <p class="m-0 text-white">Gallery</p>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Gallery Grid start-->
+    <div class="container-fluid">
+        <div class="m-3 d-flex justify-content-center">
+            <h2>Gym Photos:</h2>
+        </div>
+
+        <div class="row mx-2">
+            <div class="col-md-6 text-center p-2">
+                <img class="img-fluid mb-2" src="./static/img/gallery/gym-1.jpeg">
+            </div>
+            <div class="col-md-6 text-center p-2">
+                <img class="img-fluid mb-2" src="./static/img/gallery/gym-2.jpeg">
+            </div>
+        </div>
+        <div class="row mx-2 d-flex align-items-center">
+            <div class="col-md-4 text-center p-2">
+                <img class="img-fluid mb-2" src="./static/img/gallery/gym-3.jpeg">
+            </div>
+            <div class="col-md-4 text-center p-2">
+                <img class="img-fluid mb-2" style="max-height: 340px;" src="./static/img/gallery/gym-4.jpeg">
+            </div>
+            <div class="col-md-4 text-center p-2">
+                <img class="img-fluid mb-2" src="./static/img/gallery/gym-5.jpeg">
+            </div>
+        </div>
+
+        <div class="m-3 d-flex justify-content-center">
+            <h2>Trainer Photos:</h2>
+        </div>
+
+        <div class="row mx-2 d-flex align-items-center">
+            <div class="col-md-4 text-center p-4">
+                <img class="img-fluid mb-2" src="./static/img/gallery/body-2.jpeg">
+            </div>
+            <div class="col-md-4 text-center p-4">
+                <img class="img-fluid mb-2" src="./static/img/gallery/body-1.jpeg">
+            </div>
+            <div class="col-md-4 text-center p-4">
+                <img class="img-fluid mb-2" src="./static/img/gallery/body-3.jpeg">
+            </div>
+        </div>
+        <div class="row mx-2 d-flex align-items-center">
+            <div class="col-md-4 text-center p-4">
+                <img class="img-fluid mb-2" src="./static/img/gallery/body-4.jpeg">
+            </div>
+            <div class="col-md-4 text-center p-4">
+                <img class="img-fluid mb-2" src="./static/img/gallery/photo.jpeg">
+            </div>
+            <div class="col-md-4 text-center p-4">
+                <img class="img-fluid mb-2" src="./static/img/gallery/body-5.jpeg">
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Grid start-->
+
+    <!-- Footer Start -->
+    <div class="footer container-fluid mt-5 py-5 px-sm-3 px-md-5 text-white">
+        <div class="row pt-5">
+            <div class="col-lg-5 col-md-4 mb-5 pl-5">
+                <h4 class="text-danger mb-4">Get In Touch</h4>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Chinna Subbanna Layout, Saibaba Mission Post,<br>Coimbatore - 641011</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>0422 4981081<br>+91 75400 88121</p>
+                <p><i class="fa fa-envelope mr-2"></i>bashfitnesscbe@gmail.com</p>
+                <a href="https://www.instagram.com/bash.fitness/" style="color: white; text-decoration: none;" target="_blank"><i class="fab fa-instagram mr-2"></i>bash.fitness</a>
+            </div>
+            <div class="col-lg-3 col-md-4 mb-5 pl-5">
+                <h4 class="text-danger mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="gallery"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white mb-2" href="joinus"><i class="fa fa-angle-right mr-2"></i>Join us</a>
+                    <a class="text-white mb-2" href="contact"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                    <a class="text-white" href="admin"><i class="fa fa-angle-right mr-2"></i>Admin login</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 mb-5 pl-5">
+                <h4 class="text-danger mb-4">Opening Hours</h4>
+                <h5 class="text-white">Monday - Saturday</h5>
+                <h5 class="text-white">Morning</h5>
+                <p>5.30 AM - 9.30 AM</p>
+                <h5 class="text-white">Evening</h5>
+                <p>5.00 PM - 9.00 PM</p>
+            </div>
+        </div>
+        <div class="container border-top border-dark pt-5">
+            <p class="m-0 text-center text-white">
+                Designed with &#9829; by <a class="text-white font-weight-bold" href="https://webmakers.co.in" target="_blank">WebMakers</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="./static/lib/easing/easing.min.js"></script>
+    <script src="./static/lib/waypoints/waypoints.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="./static/mail/jqBootstrapValidation.min.js"></script>
+    <script src="./static/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="./static/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bash Fitness</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="./static/img/favicon.png" rel="icon">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="./static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="./static/css/style.min.css" rel="stylesheet">
+    
+</head>
+
+<body style="background-color: #f2f2f2">
+  <!-- WA-widget -->
+  <div id="wa-widget"><i class="fab fa-whatsapp"></i></div>
+    <div class="wa-chat-box">
+        <div class="wa-header">
+        <img class="wa-brand" src="../../static/img/logo.png">
+        <div class="wa-brand-text">
+            <div class="wa-brand-name">Bash Fitness</div>
+            <div class="wa-brand-subtitle">Ask us anything!</div>
+            <div class="wa-close">x</div>
+        </div>
+        </div>
+        <div class="wa-content">
+        <div class="wa-content-chat">
+            <div class="wa-content-chat-brand">Bash Fitness</div>
+            <div class="wa-content-chat-message">Hi there!<br>Reach us out with any queries.</div>
+        </div>
+        </div>
+        <div class="wa-send">
+        <a href="https://wa.me/+917540088121" target="_blank" style="text-decoration: none;" class="wa-send-button"><i id="send-logo" class="fab fa-whatsapp"></i>Start Chat</a>
+        </div>
+    </div>
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-2">
+            <a href="#" class="navbar-brand logo-group">
+                <img src="../../static/img/logo.png" class="logo-img">
+                <h1 class="m-0 font-weight-bold text-danger logo-name">BASH&nbsp;</h1>
+                <h1 class="m-0 font-weight-bold text-white logo-name-2">FITNESS</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto p-4 bg-secondary">
+                    <a href="/" class="nav-item nav-link active">Home</a>
+                    <a href="about" class="nav-item nav-link">About Us</a>
+                    <a href="gallery" class="nav-item nav-link">Gallery</a>
+                    <a href="joinus" class="nav-item nav-link">Join Us</a>
+                    <!-- <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu text-capitalize">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="single.html" class="dropdown-item">Blog Detail</a>
+                        </div>
+                    </div> -->
+                    <a href="contact" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="blog-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="carousel-image" src="./static/img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="text-white text-capitalize m-0 carousel-title">Gym & Fitness Center</h3>
+                        <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize carousel-quote">Hustle for the muscle</h2>
+                        <a href="joinus" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5 font-weight-bold carousel-join">Join Us Now</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="carousel-image" src="./static/img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="text-white text-capitalize m-0 carousel-title">Gym & Fitness Center</h3>
+                        <h2 class="display-3 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize carousel-quote">Today's Actions are Tomorrow's Results</h2>
+                        <a href="joinus" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5 font-weight-bold carousel-join">Join Us Now</a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#blog-carousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#blog-carousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="container py-4">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid my-5 mx-lg-0" src="./static/img/feature-4.jpg" alt="Image">
+            </div>
+            <div class="col-lg-6">
+                <p class="about-p">Bash fitness provides a total fitness experience designed around your abilities, your body, and your goals. 
+                    Our goal is to help you tackle anything that stands in the way of a healthier you, together. <br><b>Love Your Body, It's the only one you get.</b></p>
+                <div class="row py-2">
+                    <div class="col-sm-6">
+                        <i class="flaticon-barbell display-2 text-danger"></i>
+                        <h4 class="font-weight-bold">Certified Trainer</h4>
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="flaticon-medal display-2 text-danger"></i>
+                        <h4 class="font-weight-bold">Award Winning</h4>
+                    </div>
+                </div>
+                <a href="about" class="btn btn-md px-4 btn-outline-danger">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Features Start -->
+    <div class="container-fluid my-5">
+        <div class="row">
+            <div class="col-lg-4 p-0">
+                <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
+                    <i class="flaticon-training display-3 text-dnager mr-3"></i>
+                    <div class="">
+                        <h2 class="text-white mb-3">Progression</h2>
+                        <p>The principle of progression states that as your body adapts to your exercise routine, you have to gradually 
+                            increase the duration or intensity to see growth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 p-0">
+                <div class="d-flex align-items-center bg-danger text-white px-5" style="min-height: 300px;">
+                    <i class="flaticon-weightlifting display-3 text-secondary mr-3"></i>
+                    <div class="">
+                        <h2 class="text-white mb-3">Workout</h2>
+                        <p>Regular physical activity can improve your muscle strength & boost your endurance and helps your cardiovascular
+                            system work more efficiently
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 p-0">
+                <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
+                    <i class="flaticon-treadmill display-3 text-danger mr-3"></i>
+                    <div class="">
+                        <h2 class="text-white mb-3">Nutrition</h2>
+                        <p>Nutrition is a critical part of health and development, which helps for stronger immune systems and 
+                            lower risk of non-communicable diseases.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+
+    <!-- GYM Feature Start -->
+    <div class="container feature pt-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h4 class="text-danger font-weight-bold">Why Choose Us?</h4>
+            <h4 class="display-4 font-weight-bold">Benifits of Joining Our GYM</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="./static/img/feature-1.jpg" alt="Image">
+                        <i class="flaticon-barbell"></i>
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Personalised Schedule</h4>
+                        <p>We provide personalised workouts based on individual fitness goal.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="./static/img/feature-2.jpg" alt="Image">
+                        <i class="flaticon-training"></i>
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Online training</h4>
+                        <p>We provide online classes as well on an optional basis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="./static/img/feature-3.jpg" alt="Image">
+                        <i class="flaticon-trends"></i>
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Free WiFi</h4>
+                        <p>We provide free Wifi which encourages people to stick at their health plan, 
+                            help boost your social media profile and much more.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="./static/img/feature-4.jpg" alt="Image">
+                        <i class="flaticon-support"></i>
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Constant Support</h4>
+                        <p>We provide flexible schedule & format and nutritional advices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GYM Feature End -->
+
+    <!-- BMI Calculation Start -->
+    <div class="container-fluid position-relative bmi my-5">
+        <div class="container">
+            <div class="row px-3 align-items-center">
+                <div class="col-md-6">
+                    <div class="pr-md-3 d-none d-md-block">
+                        <h4 class="text-danger">Body Mass Index </h4>
+                        <h4 class="display-4 text-white font-weight-bold mb-4">What is BMI?</h4>
+                        <p class="m-0 text-white">Body mass index is a value derived from the mass and height of a person. The BMI is
+                             defined as the body mass divided by the square of the body height, and is expressed in units of kg/m², 
+                             resulting from mass in kilograms and height in metres</p>
+                    </div>
+                </div>
+                <div class="col-md-6 bg-secondary py-5">
+                    <div class="py-5 px-3">
+                        <h1 class="mb-4 text-white">Calculate your BMI</h1>
+                        <form>
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <input id="bmi-weight" type="text" class="form-control form-control-lg bg-dark text-white" placeholder="Weight (KG)">
+                                </div>
+                                <div class="col form-group">
+                                    <input id="bmi-height" type="text" class="form-control form-control-lg bg-dark text-white" placeholder="Height (CM)">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <input id="bmi-age" type="text" class="form-control form-control-lg bg-dark text-white" placeholder="Age">
+                                </div>
+                                <div class="col form-group">
+                                    <select class="custom-select custom-select-lg bg-dark text-muted">
+                                        <option>Gender</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input id="bmi-button" type="button" class="btn btn-lg btn-block btn-dark border-light"
+                                        value="Calculate Now">
+                                </div>
+                            </div>
+                            <div class="form-row mt-3">
+                                <div class="col text-center">
+                                    <p id="bmi-result" class="text-white" style="font-size: large;">BMI value: </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BMI Calculation End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid position-relative testimonial my-5">
+        <div class="container">
+            <div class="row px-3 align-items-center">
+                <div class="col-md-6 bg-secondary">
+                    <div class="d-flex align-items-center px-3" style="min-height: 450px;">
+                        <div id="carouselId" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselId" data-slide-to="1"></li>
+                                <li data-target="#carouselId" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <div class="d-flex align-items-center mb-4 text-white">
+                                        <img width="80" height="80" class="rounded-circle bg-dark p-2" src="./static/img/default.png" alt="Image">
+                                        <div class="pl-4">
+                                            <h4 class="text-danger">Manoj Mohan</h4>
+                                            <p class="m-0">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
+                                        Great gym. You get an awesome & attentive trainer who will help you reach your goals. 1month since I joined I am loving
+                                        the workout routine. Focus is on longer term incremental fitness. Good for working professionals who can rarely find time. 
+                                        Trust the trainer and take a chance. It will be worth.
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex align-items-center mb-4 text-white">
+                                        <img width="80" height="80" class="rounded-circle bg-dark p-2" src="./static/img/default.png" alt="Image">
+                                        <div class="pl-4">
+                                            <h4 class="text-danger">Jeremy Asirwaad</h4>
+                                            <p class="m-0">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
+                                        The best gym, for beginners and advanced level bodybuilders, the gym coach is very nice, humble, and friendly. There is no
+                                         need of a personal trainer becoz the gym coach/owner trains you very well. I highly recommend this gym
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex align-items-center mb-4 text-white">
+                                        <img width="80" height="80" class="rounded-circle bg-dark p-2" src="./static/img/default.png" alt="Image">
+                                        <div class="pl-4">
+                                            <h4 class="text-danger">Ayan Chakraborty</h4>
+                                            <p class="m-0">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
+                                        Very nice Gym, the owner/trainer is humble and friendly, giving personal attention to each and every client, have all the
+                                         major equipment...one of the best in Saibaba Colony.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="pl-md-3 d-none d-md-block">
+                        <h4 class="text-danger">Testimonial</h4>
+                        <h4 class="display-4 mb-4 text-white font-weight-bold">What Our Clients Say?</h4>
+                        <p class="m-0 text-white">Clients are our biggest asset. Without a strong client base, a business will fall apart. Maintaining good 
+                            relationships with your current client is very important.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Footer Start -->
+    <div class="footer container-fluid mt-5 py-5 px-sm-3 px-md-5 text-white">
+        <div class="row pt-5">
+            <div class="col-lg-5 col-md-4 mb-5 pl-5">
+                <h4 class="text-danger mb-4">Get In Touch</h4>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Chinna Subbanna Layout, Saibaba Mission Post,<br>Coimbatore - 641011</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>0422 4981081<br>+91 75400 88121</p>
+                <p><i class="fa fa-envelope mr-2"></i>bashfitnesscbe@gmail.com</p>
+                <a href="https://www.instagram.com/bash.fitness/" style="color: white; text-decoration: none;" target="_blank"><i class="fab fa-instagram mr-2"></i>bash.fitness</a>
+            </div>
+            <div class="col-lg-3 col-md-4 mb-5 pl-5">
+                <h4 class="text-danger mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="gallery"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white mb-2" href="joinus"><i class="fa fa-angle-right mr-2"></i>Join us</a>
+                    <a class="text-white mb-2" href="contact"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                    <a class="text-white" href="admin"><i class="fa fa-angle-right mr-2"></i>Admin login</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 mb-5 pl-5">
+                <h4 class="text-danger mb-4">Opening Hours</h4>
+                <h5 class="text-white">Monday - Saturday</h5>
+                <h5 class="text-white">Morning</h5>
+                <p>5.30 AM - 9.30 AM</p>
+                <h5 class="text-white">Evening</h5>
+                <p>5.00 PM - 9.00 PM</p>
+            </div>
+        </div>
+        <div class="container border-top border-dark pt-5">
+            <p class="m-0 text-center text-white">
+                Designed with &#9829; by <a class="text-white font-weight-bold" href="https://webmakers.co.in" target="_blank">WebMakers</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-danger back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="./static/lib/easing/easing.min.js"></script>
+    <script src="./static/lib/waypoints/waypoints.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="./static/mail/jqBootstrapValidation.min.js"></script>
+    <script src="./static/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="./static/js/main.js"></script>
+</body>
+
+</html>

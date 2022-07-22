@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bash Fitness</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="description" content="Free Datta Able Admin Template come up with latest Bootstrap 4 framework with basic components, form elements and lots of pre-made layout options" /> -->
+    <meta name="keywords" content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, datta able, datta able bootstrap admin template, free admin theme, free dashboard template"/>
+    <meta name="author" content="CodedThemes"/>
+
+    <!-- Favicon icon -->
+    <link href="./static/img/favicon.png" rel="icon">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="./static/assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="./static/assets/plugins/animation/css/animate.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="./static/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    td, th {
+      text-align: center;
+    }
+    .dropdown-menu a, .fa {
+      cursor: pointer;
+    }
+    #table-add, #table-remove {
+      width: 60%;
+    }
+    @media (max-width: 800px) {
+      #table-add, #table-remove {
+        width: 80%;
+      }
+    }
+    .dropdown-submenu {
+        position: relative;
+    }
+
+    .dropdown-submenu>.dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -6px;
+        margin-left: -1px;
+        -webkit-border-radius: 0 6px 6px 6px;
+        -moz-border-radius: 0 6px 6px;
+        border-radius: 0 6px 6px 6px;
+    }
+
+    .dropdown-submenu:hover>.dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-submenu>a:after {
+        display: block;
+        content: " ";
+        float: right;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-left-color: #ccc;
+        margin-top: 5px;
+        margin-right: -10px;
+    }
+
+    .dropdown-submenu:hover>a:after {
+        border-left-color: #fff;
+    }
+
+    .dropdown-submenu.pull-left {
+        float: none;
+    }
+
+    .dropdown-submenu.pull-left>.dropdown-menu {
+        left: -100%;
+        margin-left: 10px;
+        -webkit-border-radius: 6px 0 6px 6px;
+        -moz-border-radius: 6px 0 6px 6px;
+        border-radius: 6px 0 6px 6px;
+    }
+</style>
+
+<body>
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar">
+        <div class="navbar-wrapper">
+            <div class="navbar-brand header-logo">
+                <a href="index.html" class="b-brand">
+                  <img src="../../static/img/logo.png" style="height: 50px; width: 50px;">
+                  <span class="b-title">Bash Fitness</span>
+                </a>
+                <a class="mobile-menu" id="mobile-collapse"><span></span></a>
+            </div>
+            <div class="navbar-content scroll-div" style="margin-top: 25px;">
+                <ul class="nav pcoded-inner-navbar">
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Navigation</label>
+                    </li>
+                    <li data-username="dashboard Ecommerce CRM Analytics Crypto Project" class="nav-item">
+                        <a href="dashboard" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Member Info</label>
+                    </li>
+                    <li data-username="basic Default components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item">
+                        <a href="pendingenquiries" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Pending Enquiries</span></a>
+                    </li>
+                    <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item">
+                        <a href="joinedmembers" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Joined Members</span></a>
+                    </li>
+                    <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a href="/addmember" class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext">Add Member</span></a>
+                    </li>
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Packages Info</label>
+                    </li>
+                    <li data-username="Table bootstrap datatable footable" class="nav-item active">
+                        <a href="/workouts" class="nav-link "><span class="pcoded-micon"><i class="feather icon-star"></i></span><span class="pcoded-mtext">Workouts List</span></a>
+                    </li>
+                    <!-- <li data-username="Charts Morris" class="nav-item"><a href="chart-morris.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Expense Calculator</span></a></li> -->
+                    <!-- <li data-username="Maps Google" class="nav-item"><a href="map-google.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a></li> -->
+                    <!-- <li class="nav-item pcoded-menu-caption">
+                        <label>Pages</label>
+                    </li> -->
+                    <!-- <li data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe" class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="auth-signup.html" class="" target="_blank">Sign up</a></li>
+                            <li class=""><a href="auth-signin.html" class="" target="_blank">Sign in</a></li>
+                        </ul>
+                    </li> -->
+                    <!-- <li data-username="Sample Page" class="nav-item"><a href="sample-page.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li> -->
+                    <li class="nav-item pcoded-menu-caption">
+                        <label></label>
+                    </li>
+                    <li data-username="" class="nav-item"><a href="/logout" class="nav-link"><span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Logout</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light">
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse1"><span></span></a>
+            <a href="index.html" class="b-brand">
+              <img src="../../static/img/logo.png" style="height: 50px; width: 50px;">
+              <span class="b-title">Bash Fitness</span>
+            </a>
+        </div>
+        <a class="mobile-menu" id="mobile-header">
+            <i class="feather icon-more-horizontal"></i>
+        </a>
+
+        <div class="collapse navbar-collapse">
+          <!-- <h3 style="padding-left: 33px;padding-top: 30px;">Welcome Admin !!</h3> -->
+        <!--  <ul class="navbar-nav mr-auto">
+                <li><a href="javascript:" class="full-screen" onclick="javascript:toggleFullScreen()"><i class="feather icon-maximize"></i></a></li>
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle" href="javascript:" data-toggle="dropdown">Dropdown</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:">Action</a></li>
+                        <li><a class="dropdown-item" href="javascript:">Another action</a></li>
+                        <li><a class="dropdown-item" href="javascript:">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <div class="main-search">
+                        <div class="input-group">
+                            <input type="text" id="m-search" class="form-control" placeholder="Search . . .">
+                            <a href="javascript:" class="input-group-append search-close">
+                                <i class="feather icon-x input-group-text"></i>
+                            </a>
+                            <span class="input-group-append search-btn btn btn-primary">
+                                <i class="feather icon-search input-group-text"></i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" href="javascript:" data-toggle="dropdown"><i class="icon feather icon-bell"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right notification">
+                            <div class="noti-head">
+                                <h6 class="d-inline-block m-b-0">Notifications</h6>
+                                <div class="float-right">
+                                    <a href="javascript:" class="m-r-10">mark as read</a>
+                                    <a href="javascript:">clear all</a>
+                                </div>
+                            </div>
+                            <ul class="noti-body">
+                                <li class="n-title">
+                                    <p class="m-b-0">NEW</p>
+                                </li>
+                                <li class="notification">
+                                    <div class="media">
+                                        <img class="img-radius" src="assets/images/user/avatar-1.jpg" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <p><strong>John Doe</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+                                            <p>New ticket Added</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="n-title">
+                                    <p class="m-b-0">EARLIER</p>
+                                </li>
+                                <li class="notification">
+                                    <div class="media">
+                                        <img class="img-radius" src="assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <p><strong>Joseph William</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+                                            <p>Prchace New Theme and make payment</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification">
+                                    <div class="media">
+                                        <img class="img-radius" src="assets/images/user/avatar-3.jpg" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <p><strong>Sara Soudein</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+                                            <p>currently login</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="noti-footer">
+                                <a href="javascript:">show all</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown drp-user">
+                        <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon feather icon-settings"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-notification">
+                            <div class="pro-head">
+                                <img src="assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
+                                <span>John Doe</span>
+                                <a href="auth-signin.html" class="dud-logout" title="Logout">
+                                    <i class="feather icon-log-out"></i>
+                                </a>
+                            </div>
+                            <ul class="pro-body">
+                                <li><a href="javascript:" class="dropdown-item"><i class="feather icon-settings"></i> Settings</a></li>
+                                <li><a href="javascript:" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
+                                <li><a href="message.html" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li>
+                                <li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul> -->
+        </div>
+    </header>
+    <!-- [ Header ] end -->
+
+    <!-- [ Main Content ] start -->
+    <!-- <div class="container-fluid mt-2 p-2">
+        <div class="dropdown d-flex justify-content-center">
+          <button class="btn btn-secondary dropdown-toggle mb-5" type="button" id="dropdownMenu" data-toggle="dropdown">
+            Select level
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+            <a id="dd1" class="dropdown-item">Amateur</a>
+            <a id="dd2" class="dropdown-item">Beginner</a>
+            <a id="dd3" class="dropdown-item">Intermediate</a>
+            <a id="dd4" class="dropdown-item">Advanced</a>
+          </div>
+        </div>
+    
+        <div class="d-flex justify-content-center mb-5">
+          <table id="workout-table" class="table table-bordered" border="1" style="width:50%;">
+            <thead>
+              <tr>
+                <th scope="col">Workout</th>
+                <th scope="col">Set x Reps</th>
+                <th style="width:10%" scope="col">Remove</th>
+              </tr>
+            </thead>
+            <tbody id="trows">
+            </tbody>
+          </table>
+        </div>
+    
+        <div class="d-flex justify-content-center align-items-center mb-5">
+          <label for="workout-input"><b>Workout:&nbsp;</b></label>
+          <input type="text" id="workout-input">&nbsp;&nbsp;
+          <label for="set-input"><b>Set x Reps:&nbsp;</b></label>
+          <input type="text" id="set-input">&nbsp;&nbsp;
+          <button class="btn btn-secondary" type="button" id="add">
+            Add
+          </button>
+        </div>
+    
+        <div class="d-flex justify-content-center mb-5">
+          <button class="btn btn-secondary mb-5" type="button" id="print">
+            Print
+          </button>
+        </div>
+      
+    </div> -->
+    <div class="container-fluid mt-2 p-2">
+    
+        <div class="dropdown d-flex justify-content-center">
+          <button class="btn btn-secondary dropdown-toggle mb-5" type="button" id="dropdownMenu" data-toggle="dropdown">
+            Select category
+          </button>
+          <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+            <li class="dropdown-submenu">
+              <a class="dropdown-item" tabindex="-1">Warmup/Cooldown</a>
+              <ul class="dropdown-menu">
+                <li id="dd01" class="dropdown-item">SMR</li>
+                <li id="dd02" class="dropdown-item">Static stretching</li>
+                <li id="dd03" class="dropdown-item">Active flexibility</li>
+                <li id="dd04" class="dropdown-item">Functional flexibility</li>
+                <li id="dd05" class="dropdown-item">Controversial stretches</li>
+                <li id="dd06" class="dropdown-item">Neck, Chest, Shoulders</li>
+                <li id="dd07" class="dropdown-item">Arms, Hands & Wrists</li>
+                <li id="dd08" class="dropdown-item">Back & Torso</li>
+                <li id="dd09" class="dropdown-item">Hips & Glutes</li>
+                <li id="dd10" class="dropdown-item">Knees & Things</li>
+                <li id="dd11" class="dropdown-item">Lower legs, Ankles & Feet</li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a class="dropdown-item" tabindex="-1">Workouts</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item">Resistance band</a>
+                  <ul class="dropdown-menu">
+                    <li id="dd12" class="dropdown-item">Chest</li>
+                    <li id="dd13" class="dropdown-item">Shoulder</li>
+                    <li id="dd14" class="dropdown-item">Back</li>
+                    <li id="dd15" class="dropdown-item">Biceps</li>
+                    <li id="dd16" class="dropdown-item">Triceps</li>
+                    <li id="dd17" class="dropdown-item">Core</li>
+                  </ul>
+                </li>
+                <li id="dd18" class="dropdown-item">Bodyweight Exercise</li>
+                <li id="dd19" class="dropdown-item">Kettleball Excercise</li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item">Core</a>
+                  <ul class="dropdown-menu">
+                    <li id="dd20" class="dropdown-item">Stabilization</li>
+                    <li id="dd21" class="dropdown-item">Strength</li>
+                    <li id="dd22" class="dropdown-item">Power</li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item">Balance</a>
+                  <ul class="dropdown-menu">
+                    <li id="dd23" class="dropdown-item">Stabilization</li>
+                    <li id="dd24" class="dropdown-item">Strength</li>
+                    <li id="dd25" class="dropdown-item">Power</li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item">Plyometric</a>
+                  <ul class="dropdown-menu">
+                    <li id="dd26" class="dropdown-item">Stabilization</li>
+                    <li id="dd27" class="dropdown-item">Strength</li>
+                    <li id="dd28" class="dropdown-item">Power</li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item">Total body</a>
+                  <ul class="dropdown-menu">
+                    <li id="dd29" class="dropdown-item">Stabilization</li>
+                    <li id="dd30" class="dropdown-item">Strength</li>
+                    <li id="dd31" class="dropdown-item">Power</li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item">Chest</a>
+                  <ul class="dropdown-menu">
+                    <li id="dd32" class="dropdown-item">Exercises</li>
+                    <li id="dd33" class="dropdown-item">Stabilization</li>
+                    <li id="dd34" class="dropdown-item">Strength</li>
+                    <li id="dd35" class="dropdown-item">Power</li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item">Shoulder</a>
+                  <ul class="dropdown-menu">
+                    <li id="dd36" class="dropdown-item">Exercises</li>
+                    <li id="dd37" class="dropdown-item">Stabilization</li>
+                    <li id="dd38" class="dropdown-item">Strength</li>
+                    <li id="dd39" class="dropdown-item">Power</li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item">Back</a>
+                  <ul class="dropdown-menu">
+                    <li id="dd40" class="dropdown-item">Exercises</li>
+                    <li id="dd41" class="dropdown-item">Stabilization</li>
+                    <li id="dd42" class="dropdown-item">Strength</li>
+                    <li id="dd43" class="dropdown-item">Power</li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item">Biceps</a>
+                  <ul class="dropdown-menu">
+                    <li id="dd44" class="dropdown-item">Exercises</li>
+                    <li id="dd45" class="dropdown-item">Stabilization</li>
+                    <li id="dd46" class="dropdown-item">Strength</li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item">Triceps</a>
+                  <ul class="dropdown-menu">
+                    <li id="dd47" class="dropdown-item">Exercises</li>
+                    <li id="dd48" class="dropdown-item">Stabilization</li>
+                    <li id="dd49" class="dropdown-item">Strength</li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item">Leg</a>
+                  <ul class="dropdown-menu">
+                    <li id="dd50" class="dropdown-item">Exercises</li>
+                    <li id="dd51" class="dropdown-item">Stabilization</li>
+                    <li id="dd52" class="dropdown-item">Strength</li>
+                    <li id="dd53" class="dropdown-item">Power</li>
+                  </ul>
+                </li>
+                <li id="dd54" class="dropdown-item">Abs</li>
+                <li id="dd55" class="dropdown-item">Arm</li>
+                <li id="dd56" class="dropdown-item">Buttocks</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-flex justify-content-center mb-5">
+          <table id="table-add" class="table table-bordered" border="1">
+            <thead>
+              <tr>
+                <th scope="col">Workout</th>
+                <th style="width:15%" scope="col">Set x Reps</th>
+                <th style="width:15%" scope="col">Duration/Rest</th>
+                <th style="width:10%" scope="col">Add</th>
+              </tr>
+            </thead>
+            <tbody id="add-rows">
+            </tbody>
+          </table>
+        </div>
+    
+        <hr>
+        <div class="d-flex justify-content-center my-4">
+          <h3>Workout List</h3>
+        </div>
+    
+        <div class="dropdown d-flex justify-content-center">
+          <button class="btn btn-secondary dropdown-toggle mb-5" type="button" id="gapMenu" data-toggle="dropdown">
+            Select row
+          </button>
+          <div class="dropdown-menu" aria-labelledby="gapMenu">
+            <a id="gap1" class="dropdown-item">Warm up</a>
+            <a id="gap2" class="dropdown-item">Workouts</a>
+            <a id="gap3" class="dropdown-item">Cool down</a>
+            <a id="gap4" class="dropdown-item">Day 1</a>
+            <a id="gap5" class="dropdown-item">Day 2</a>
+            <a id="gap6" class="dropdown-item">Day 3</a>
+            <a id="gap7" class="dropdown-item">Day 4</a>
+            <a id="gap8" class="dropdown-item">Day 5</a>
+            <a id="gap9" class="dropdown-item">Day 6</a>
+          </div>
+        </div>
+    
+        <div class="d-flex justify-content-center mb-5">
+          <table id="table-remove" class="table table-bordered" border="1">
+            <thead>
+              <tr>
+                <th scope="col">Workout</th>
+                <th style="width:15%" scope="col">Set x Reps</th>
+                <th style="width:15%" scope="col">Duration/Rest</th>
+                <th style="width:10%" scope="col">Remove</th>
+              </tr>
+            </thead>
+            <tbody id="remove-rows">
+            </tbody>
+          </table>
+        </div>
+    
+        <hr>
+        <div class="d-flex justify-content-center align-items-center my-5" style="overflow-x: auto;">
+          <label for="workout-input"><b>Workout: </b></label>
+          <input type="text" id="workout-input">&nbsp;
+          <label for="set-input"><b>Set x Reps: </b></label>
+          <input type="text" id="set-input">&nbsp;
+          <label for="duration-input"><b>Duration: </b></label>
+          <input type="text" id="duration-input">&nbsp;
+          <button class="btn btn-secondary" type="button" id="add">
+            Add
+          </button>
+        </div>
+    
+        <div class="d-flex justify-content-center mb-3">
+          <label for="name-input"><b>Name: </b></label>
+          <input type="text" id="name-input" style="height: 30px;">&nbsp;
+          <label for="goalMenu"><b>Goal: </b></label>
+          <button class="btn btn-secondary dropdown-toggle mb-5" id="goalMenu" data-toggle="dropdown">
+            Select goal
+          </button>
+          <div class="dropdown-menu" aria-labelledby="goalMenu">
+            <a id="goal1" class="dropdown-item">Strength</a>
+            <a id="goal2" class="dropdown-item">Endurance</a>
+            <a id="goal2" class="dropdown-item">Increase cardio-vascular capacity</a>
+            <a id="goal2" class="dropdown-item">Increase flexibility</a>
+            <a id="goal2" class="dropdown-item">General fitness</a>
+            <a id="goal3" class="dropdown-item">Weight Loss</a>
+            <a id="goal4" class="dropdown-item">Weight Gain</a>
+          </div>
+        </div>
+    
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-secondary mb-5" type="button" id="print">
+            Print
+          </button>
+        </div>
+      
+    </div>
+    <!-- [ Main Content ] end -->
+
+    <script src="./static/assets/js/vendor-all.min.js"></script>
+	  <script src="./static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./static/assets/js/pcoded.min.js"></script>
+    <script src="../../static/js/dashboard.js"></script>
+    <script src="../../static/js/workout-list.js"></script>
+
+</body>
+</html>

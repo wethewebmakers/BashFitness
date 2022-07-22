@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bash Fitness</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, datta able, datta able bootstrap admin template, free admin theme, free dashboard template"/>
+    <meta name="author" content="CodedThemes"/>
+
+    <!-- Favicon icon -->
+    <link href="../static/img/favicon.png" rel="icon">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="../static/assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="../static/assets/plugins/animation/css/animate.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../static/assets/css/style.css">
+
+</head>
+<style>
+    .navbar-collapse .welcome_style{
+        padding-left: 33px;
+        padding-top: 30px;
+    }
+
+    @media (min-width:1200px){
+        .pcoded-navbar .mobile-menu span{
+            display: none;
+        }
+    }
+
+    .label_reject, .label_approve{
+        padding: 10px 15px;
+        min-height: auto;
+        position: relative;
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+
+    @media (min-width:1200px){
+        .label_reject{float: right;}
+        .label_approve{float: left;}
+    }
+
+    .fa{
+        font-size: 30px;
+    }
+
+    .label_reject, .label_approve{
+        padding: 10px 15px;
+        min-height: auto;
+        position: relative;
+        margin-bottom: 5px;
+        font-size: 18px;
+        border: none;
+    }
+
+    @media (min-width:1200px){
+        .label_reject{float: right;}
+        .label_approve{float: left;}
+    }
+
+    .open-button {
+        background-color: #555;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        opacity: 0.8;
+        position: fixed;
+        bottom: 23px;
+        right: 28px;
+        width: 280px;
+    }
+
+    .form-popup, .form-delete {
+        display: none;
+        position: fixed;
+        bottom: 50px;
+        right: 30%;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+        max-height: 500px;
+        overflow-y: auto;
+    }
+
+    .form-delete{
+        top: 200px;
+        height: fit-content;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+        max-width: 400px;
+        padding: 10px;
+        background-color: white;
+    }
+
+    /* Full-width input fields */
+    .form-container input[type=text], .form-container input[type=password], .form-options, .form-container input[type=number], .form-container input[type=date] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    /* When the inputs get focus, do something */
+    .form-container input[type=text]:focus, .form-container input[type=password]:focus, .form-container input[type=number]:focus, .form-container input[type=date]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    /* Set a style for the submit/login button */
+    .form-container .btn {
+        background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom:10px;
+        opacity: 0.8;
+    }
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+        background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);;
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+        opacity: 1;
+    }
+
+    @media (max-width: 600px) {
+        .form-delete, .form-popup {
+            right: 10%;
+        }
+    }
+    
+</style>
+
+<body>
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar">
+        <div class="navbar-wrapper">
+            <div class="navbar-brand header-logo">
+                <a href="index.html" class="b-brand">
+                    <img src="../../static/img/logo.png" style="height: 50px; width: 50px;">
+                    <span class="b-title">Bash Fitness</span>
+                </a>
+                <a class="mobile-menu" id="mobile-collapse"><span></span></a>
+            </div>
+            <div class="navbar-content scroll-div" style="margin-top: 25px;">
+                <ul class="nav pcoded-inner-navbar">
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Navigation</label>
+                    </li>
+                    <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
+                        <a href="/dashboard" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Member Info</label>
+                    </li>
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item">
+                        <a href="/pendingenquiries" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Pending Enquiries</span></a>
+                    </li>
+                    <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item active">
+                        <a href="/joinedmembers" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Joined Members</span></a>
+                    </li>
+                    <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a href="/addmember" class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext">Add Member</span></a>
+                    </li>
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Packages Info</label>
+                    </li>
+                    <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a href="/workouts" class="nav-link "><span class="pcoded-micon"><i class="feather icon-star"></i></span><span class="pcoded-mtext">Workouts List</span></a>
+                    </li>
+                    <li class="nav-item pcoded-menu-caption">
+                        <label></label>
+                    </li>
+                    <li data-username="" class="nav-item"><a href="/logout" class="nav-link"><span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Logout</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light">
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse1"><span></span></a>
+            <a href="index.html" class="b-brand">
+                <img src="../../static/img/logo.png" style="height: 50px; width: 50px;">
+                <span class="b-title">Bash Fitness</span>
+            </a>
+        </div>
+        <a class="mobile-menu" id="mobile-header">
+            <i class="feather icon-more-horizontal"></i>
+        </a>
+
+    </header>
+    <!-- [ Header ] end -->
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                
+                                <!--[social-media section] start-->
+                                <div class="col-md-12 col-xl-6">
+                                    <div class="card card-social">
+                                        <div class="card-block border-bottom">
+                                            <div class="row align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="col text-right">
+                                                    <h3>Personal Details</h3><span><i onclick="editPersonal()" class="fas fa-edit"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% if member.profileImage %}
+                                            <div class="card-block">
+                                                <div class="row align-items-center justify-content-center card-active">
+                                                    <div class="col-12" style="display: flex; justify-content:center;">
+                                                        <img src="../{{ member.profileImage }}" style="width: 20%;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Name:</span>{{ member.userName }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="text-center  m-b-10"><span class="text-muted m-r-5">Contact:</span>{{ member.contact }}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Birthday:</span>{{ member.birthday }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="text-center  m-b-10"><span class="text-muted m-r-5">Gender:</span>{{ member.gender }}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Email ID:</span>{{ member.userEmail }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="text-center  m-b-10"><span class="text-muted m-r-5">Emergency contact:</span>{{ member.emergencyContact }}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Address:</span>{{ member.address }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="text-center  m-b-10"><span class="text-muted m-r-5">City:</span>{{ member.city }}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">State:</span>{{ member.state }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="text-center  m-b-10"><span class="text-muted m-r-5">Pincode:</span>{{ member.pincode }}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Occupation:</span>{{ member.occupation }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="text-center  m-b-10"><span class="text-muted m-r-5">Working Hours:</span>{{ member.workingHours }}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Blood Group:</span>{{ member.bloodGroup }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="text-center  m-b-10"><span class="text-muted m-r-5">Sleeping Time:</span>{{ member.sleepingTime }}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Training Mode:</span>{{ member.trainingMode }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--[social-media section] start-->
+                                <div class="col-md-12 col-xl-6">
+                                    <div class="card card-social">
+                                        <div class="card-block border-bottom">
+                                            <div class="row align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="col text-right">
+                                                    <h3>Fitness Details</h3>
+                                                    <i class="fas fa-edit" onclick="editFitness()"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Height:</span>{{ member.height }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="text-center  m-b-10"><span class="text-muted m-r-5">Weight:</span>{{ member.weight }}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-12">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">BMI:</span>{{ member.BMI }}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Has the member been to gym already?</span>{{ member.attendedGym }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Has the member been told that he/she has any of these? </span>{{ member.BPCheck }}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Does the member has any back pain or spine disorder? </span>{{ member.question1 }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="text-center  m-b-10"><span class="text-muted m-r-5">Is the member sensitive to be touched or pressurised in any area? </span>{{ member.question2 }}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Does the member smoke cigarettes? </span>{{ member.question3 }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    {% if enquiry.question3 == "Yes" %}
+                                                        <h6 class="text-center  m-b-10"><span class="text-muted m-r-5">How often does the member smoke? </span>{{ member.smokingHabit }}</h6>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Does the member has any present/past injury or done any surgery? </span>{{ member.question4 }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="text-center  m-b-10"><span class="text-muted m-r-5">Does the member has any difficulty in sleeping? </span>{{ member.question5 }}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    {% if enquiry.physicalActivity == "None" %}
+                                                        <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Current physical activity or Exercise level </span>None</h6>
+                                                    {% else %}
+                                                        <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Current physical activity or Exercise level </span>{{ member.physicalActivity }}</h6>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="col-6">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% if enquiry.physicalActivity != "None" %}
+                                            <div class="card-block">
+                                                <div class="row align-items-center justify-content-center card-active">
+                                                    <div class="col-6">
+                                                        <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Exercise Frequency (session per week)</span>{{ member.exerciseFrequency }}</h6>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <h6 class="text-center  m-b-10"><span class="text-muted m-r-5">Exercise Duration (hours per week)</span>{{ member.exerciseDuration }}</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Currently taking a prescribed medication for any medical condition? </span>{{ member.question6 }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="text-center  m-b-10"><span class="text-muted m-r-5">Fitness Goal </span>{{ member.fitnessGoal }}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ Main Content ] end -->
+                            <div class="row">
+                                <div class="col-md-12 col-xl-12">
+                                    <div class="card card-social">
+                                        <div class="card-block border-bottom">
+                                            <div class="row align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    <i class="fa fa-box"></i>
+                                                </div>
+                                                <div class="col text-right">
+                                                    <h3>Package Details</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Member ID : </span>{{ member.memberId }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="text-center  m-b-10"><span class="text-muted m-r-5">Selected Package : </span>{{ member.package }}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Start Date : </span>{{ member.startDate }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="text-center  m-b-10"><span class="text-muted m-r-5">End Date : </span>{{ member.endDate }}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center card-active">
+                                                <div class="col-6">
+                                                    <h6 class="text-center m-b-10"><span class="text-muted m-r-5">Fees : </span>{{ member.fees }}</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-inline-flex justify-content-center w-100">
+                        <button onclick="deleteForm2()" class="label_reject theme-bg2 text-white f-12">Delete</button>&nbsp;
+                        <button onclick="openForm()" class="label_approve theme-bg text-white f-12">Renew</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <h5>Renewal Details</h5>
+        
+            <label for="package"><b>Package selected</b></label>
+            <select for="package" class="form-options" name="package" id="package">
+                {% for packages in packages %}
+                    <option value="{{ packages.package }}">{{ packages.package }}</option>
+                {% endfor %}
+            </select>
+        
+            <label for="startdate"><b>Start Date</b></label>
+            <input type="date" placeholder="Enter Password" name="startdate" id="startdate" required class="form-options">
+
+            <label for="fees"><b>Fees</b></label>
+            <input type="text" placeholder="Enter Fees" name="fees" id="fees" value="" required>
+        
+            <div class="d-inline-flex w-100">
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                <button type="submit" class="btn" onclick="submitRenewalDetails('{{ member.userId }}')">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-delete" id="deleteForm2">
+        <form class="form-container">
+            <h5>Delete Enquiry</h5>
+
+            <p>Are you sure you want to delete this enquiry ?</p>
+            
+            <div class="d-inline-flex w-100">
+                <button type="button" class="btn cancel" onclick="closedeleteForm2()">Cancel</button>
+                <button type="submit" class="btn" onclick="deleteMember('{{ member.userId }}')">Delete</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-popup" id="editPersonalForm">
+        <form class="form-container">
+            <h5>Edit Personal Details</h5>
+
+            <label for="memName"><b>Name</b></label>
+            <input type="text" name="memname" id="memName" value="{{ member.userName }}">
+
+            <label for="memAge"><b>Birthday</b></label>
+            <input type="date" name="memAge" id="memAge" value="{{ member.birthday }}">
+
+            <label for="memContact"><b>Contact</b></label>
+            <input type="number" name="memcontact" id="memContact" value="{{ member.contact }}">
+        
+            <label for="memEmail"><b>Email</b></label>
+            <input type="text" name="memEmail" id="memEmail" value="{{ member.userEmail }}">
+        
+            <label for="memAddress"><b>Address</b></label>
+            <input type="text" name="memAddress" id="memAddress" value="{{ member.address }}">
+
+            <label for="memGender"><b>Gender</b></label>
+            <select for="memGender" class="form-options" name="memGender" id="memGender" value="{{ member.gender }}">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="memEmergency"><b>Emergency Contact</b></label>
+            <input type="number" name="memEmergency" id="memEmergency" value="{{ member.emergencyContact }}">
+
+            <label for="memCity"><b>City</b></label>
+            <input type="text" name="memCity" id="memCity" value="{{ member.city }}">
+
+            <label for="memState"><b>State</b></label>
+            <select for="memState" class="form-options" name="memState" id="memState" value="{{ member.state }}">
+                <option value="TamilNadu">TamilNadu</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Karnataka">Karnataka</option>
+            </select>
+
+            <label for="memPincode"><b>Pincode</b></label>
+            <input type="number" id="memPincode" name="memPincode" value="{{ member.pincode }}" >
+
+            <label for="memOccupation"><b>Occupation</b></label>
+            <input type="text" id="memOccupation" name="memOccupation" value="{{ member.occupation }}">
+
+            <label for="memworkingHours"><b>Working hours</b></label>
+            <input type="number" id="memworkingHours" name="memworkingHours" value="{{ member.workingHours }}">
+
+            <label for="membloodGroup"><b>Blood group</b></label>
+            <input type="text" id="membloodGroup" name="membloodGroup" value="{{ member.bloodGroup }}">
+
+            <label for="memsleepingTime"><b>Sleeping time</b></label>
+            <input type="text" name="memsleepingTime" id="memsleepingTime" value="{{ member.sleepingTime }}">
+
+            <label for="memMode">Mode of Training required</label>
+            <select id="memMode" class="form-options" name="memMode" id="memMode" value="{{ member.trainingMode }}">
+                <option value="offline">Offline</option>
+                <option value="online">Online</option>
+            </select>
+        
+            <div class="d-inline-flex w-100">
+                <button type="submit" class="btn" onclick="editPersonalDetails('{{ member.userId }}')">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeeditPersonal()">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-popup" id="editFitnessForm">
+        <form class="form-container">
+            <h5>Edit Fitness Details</h5>
+
+            <label for="memHeight"><b>Height(in Cms)</b></label>
+            <input type="text" id="memHeight" name="memHeight" value="{{ member.height }}">
+
+            <label for="memWeight"><b>Weight(in kgs)</b></label>
+            <input type="text" id="memWeight" name="memWeight" value="{{ member.weight }}">
+
+            <label for="alreadyGymInput"><b>Has the Member been to gym already?</b></label>
+            <select id="alreadyGymInput" class="form-options">
+               {% if member.attendedGym == "Yes" %}
+                    <option selected>Yes</option>
+                    <option>No</option>
+                {% else %}
+                    <option>Yes</option>
+                    <option selected>No</option>
+                {% endif %}
+            </select>
+
+            <label for="diseaseInput"><b>Has the member has any of these below ?</b><span class="text-danger">*</span></label>
+            <div class="form-group">
+                <div class="form-check form-check-inline">
+                    {% if 'High blood pressure' in member.BPCheck %}
+                        <input class="form-check-input" type="checkbox" id="disease1" value="High blood pressure" checked>
+                    {% else %}
+                        <input class="form-check-input" type="checkbox" id="disease1" value="High blood pressure">
+                    {% endif %}
+                    <label class="form-check-label" for="disease1">High blood pressure</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    {% if 'High Cholestrol' in member.BPCheck %}
+                        <input class="form-check-input" type="checkbox" id="disease2" value="High Cholestrol" checked>
+                    {% else %}
+                        <input class="form-check-input" type="checkbox" id="disease2" value="High Cholestrol">
+                    {% endif %}
+                    <label class="form-check-label" for="disease2">High Cholestrol</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    {% if 'High blood sugar' in member.BPCheck %}
+                        <input class="form-check-input" type="checkbox" id="disease3" value="High blood sugar" checked>
+                    {% else %}
+                        <input class="form-check-input" type="checkbox" id="disease3" value="High blood sugar">
+                    {% endif %}
+                    <label class="form-check-label" for="disease3">High blood sugar</label>
+                </div>
+            </div>
+
+           <label for="backPainInput"><b>Does member has any back pain or spine disorder?</b></label>
+            <div class="form-group">
+                {% if member.question1 == "Yes" %}
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="backPainRadio" id="backPain1" value="Yes" checked>
+                        <label class="form-check-label" for="backPain1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="backPainRadio" id="backPain2" value="No">
+                        <label class="form-check-label" for="backPain2">No</label>
+                    </div>
+                {% else %}
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="backPainRadio" id="backPain1" value="Yes">
+                        <label class="form-check-label" for="backPain1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="backPainRadio" id="backPain2" value="No" checked>
+                        <label class="form-check-label" for="backPain2">No</label>
+                    </div>
+                {% endif %}
+            </div>
+
+            <label for="touchedInput"><b>Is the member sensitive to be touched or pressurised in any area?</b></label>
+            <div class="form-group">
+                {% if member.question2 == "Yes" %}
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="touchRadio" id="touch1" value="Yes" checked>
+                        <label class="form-check-label" for="touch1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="touchRadio" id="touch2" value="No">
+                        <label class="form-check-label" for="touch2">No</label>
+                    </div>
+                {% else %}
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="touchRadio" id="touch1" value="Yes">
+                        <label class="form-check-label" for="touch1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="touchRadio" id="touch2" value="No" checked>
+                        <label class="form-check-label" for="touch2">No</label>
+                    </div>
+                {% endif %}
+            </div>
+
+            <label for="smokeInput"><b>Does the member smoke cigarettes?</b></label>
+                <div class="form-group">
+                    {% if member.question3 == "Yes" %}
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="smokeRadio" id="smoke1" value="Yes" checked>
+                            <label class="form-check-label" for="smoke1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="smokeRadio" id="smoke2" value="No">
+                            <label class="form-check-label" for="smoke2">No</label>
+                        </div>
+                    {% else %}
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="smokeRadio" id="smoke1" value="Yes">
+                            <label class="form-check-label" for="smoke1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="smokeRadio" id="smoke2" value="No" checked>
+                            <label class="form-check-label" for="smoke2">No</label>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="oftenInput"><b>How often does the member smoke?</b></label>
+                    {% if member.smokingHabit %}
+                        <p>Selected option is : {{ member.smokingHabit }}</p>
+                    {% else %}
+                        <p>Selected option is : None</p>
+                    {% endif %}
+                    <select id="oftenInput" class="form-control" style="width: 50%;" disabled>
+                        <option selected>Daily</option>
+                        <option>Alternate days</option>
+                        <option>Weekly once</option>
+                        <option>very rarely</option>
+                    </select>
+                </div>
+
+            <label for="injuryInput"><b>Does the member have any present/past injury or done any surgery?</b></label>
+            <div class="form-group">
+                {% if member.question4 == "Yes" %}
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="injuryRadio" id="c" value="Yes" checked>
+                        <label class="form-check-label" for="injury1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="injuryRadio" id="injury2" value="No">
+                        <label class="form-check-label" for="injury2">No</label>
+                    </div>
+                {% else %}
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="injuryRadio" id="c" value="Yes">
+                        <label class="form-check-label" for="injury1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="injuryRadio" id="injury2" value="No" checked>
+                        <label class="form-check-label" for="injury2">No</label>
+                    </div>
+                {% endif %}
+            </div>
+
+            <label for="sleepInput"><b>Does the member has any difficulty in sleeping?</b><span class="text-danger">*</span></label>
+                <div class="form-group">
+                    {% if member.question5 == "Yes" %}
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sleepRadio" id="sleep1" value="Yes" checked>
+                            <label class="form-check-label" for="sleep1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sleepRadio" id="sleep2" value="No">
+                            <label class="form-check-label" for="sleep2">No</label>
+                        </div>
+                    {% else %}
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sleepRadio" id="sleep1" value="Yes">
+                            <label class="form-check-label" for="sleep1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sleepRadio" id="sleep2" value="No" checked>
+                            <label class="form-check-label" for="sleep2">No</label>
+                        </div>
+                    {% endif %}
+                </div>
+
+            <div class="form-group">
+                <label for="exerciseLevelInput"><b>Member's current physical activity or exercise level</b></label>
+                <p>Selected option is: {{ member.physicalActivity }}</p>
+                <select id="exerciseLevelInput" class="form-options">
+                    <option>None</option>
+                    <option>Light</option>
+                    <option>Moderate</option>
+                    <option>Vigorous</option>
+                </select>
+            </div>
+            
+            <div class="form-row">
+                {% if member.physicalActivity != "None" %}
+                    <div class="form-group col-md-6">
+                        <label for="frequencyInput"><b>Frequency of exercise (session per week)</b></label>
+                        <input type="number" class="form-control" id="frequencyInput" value="{{ member.exerciseFrequency }}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="durationInput"><b>Duration of exercise (hours per week)</b></label>
+                        <input type="number" class="form-control" id="durationInput" value="{{ member.exerciseDuration }}">
+                    </div>
+                {% else %}
+                    <div class="form-group col-md-6">
+                        <label for="frequencyInput"><b>Frequency of exercise (session per week)</b></label>
+                        <input type="number" class="form-control" id="frequencyInput" disabled>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="durationInput"><b>Duration of exercise (hours per week)</b></label>
+                        <input type="number" class="form-control" id="durationInput" disabled>
+                    </div>
+                {% endif %}
+            </div> 
+
+            <label for="medicationInput"><b>Is the member currently taking a prescribed medication for any medical condition?</b></label>
+            <div class="form-group">
+                {% if member.question6 == "Yes" %}
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="medicationRadio" id="medication1" value="Yes" checked>
+                        <label class="form-check-label" for="medication1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="medicationRadio" id="medication2" value="No">
+                        <label class="form-check-label" for="medication2">No</label>
+                    </div>
+                {% else %}
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="medicationRadio" id="medication1" value="Yes">
+                        <label class="form-check-label" for="medication1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="medicationRadio" id="medication2" value="No" checked>
+                        <label class="form-check-label" for="medication2">No</label>
+                    </div>
+                {% endif %}
+            </div>
+
+            <label for="goalInput"><b>Member's fitness goal</b></label>
+            <div class="form-group">
+                <div class="form-check form-check-inline">
+                    {% if 'Endurance' in member.fitnessGoal %}
+                        <input class="form-check-input" type="checkbox" id="goal1" value="Endurance" checked>
+                    {% else %}
+                        <input class="form-check-input" type="checkbox" id="goal1" value="Endurance">
+                    {% endif %}
+                    <label class="form-check-label" for="goal1">Endurance</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    {% if 'Strength' in member.fitnessGoal %}
+                        <input class="form-check-input" type="checkbox" id="goal2" value="Strength" checked>
+                    {% else %}
+                        <input class="form-check-input" type="checkbox" id="goal2" value="Strength">
+                    {% endif %}
+                    <label class="form-check-label" for="goal2">Strength</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    {% if 'Increase cardio-vascular capacity' in member.fitnessGoal %}
+                        <input class="form-check-input" type="checkbox" id="goal3" value="Increase cardio-vascular capacity" checked>
+                    {% else %}
+                        <input class="form-check-input" type="checkbox" id="goal3" value="Increase cardio-vascular capacity">
+                    {% endif %}
+                    <label class="form-check-label" for="goal3">Increase cardio-vascular capacity</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    {% if 'Increase flexibility' in member.fitnessGoal %}
+                        <input class="form-check-input" type="checkbox" id="goal4" value="Increase flexibility" checked>
+                    {% else %}
+                        <input class="form-check-input" type="checkbox" id="goal4" value="Increase flexibility">
+                    {% endif %}
+                    <label class="form-check-label" for="goal4">Increase flexibility</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    {% if 'General fitness' in member.fitnessGoal %}
+                        <input class="form-check-input" type="checkbox" id="goal5" value="General fitness" checked>
+                    {% else %}
+                        <input class="form-check-input" type="checkbox" id="goal5" value="General fitness">
+                    {% endif %}
+                    <label class="form-check-label" for="goal5">General fitness</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    {% if 'Weight Loss' in member.fitnessGoal %}
+                        <input class="form-check-input" type="checkbox" id="goal6" value="Weight Loss" checked>
+                    {% else %}
+                        <input class="form-check-input" type="checkbox" id="goal6" value="Weight Loss">
+                    {% endif %}
+                    <label class="form-check-label" for="goal6">Weight Loss</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    {% if 'Weight Gain' in member.fitnessGoal %}
+                        <input class="form-check-input" type="checkbox" id="goal7" value="Weight Gain" checked>
+                    {% else %}
+                        <input class="form-check-input" type="checkbox" id="goal7" value="Weight Gain">
+                    {% endif %}
+                    <label class="form-check-label" for="goal7">Weight Gain</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    {% if 'Others' in member.fitnessGoal %}
+                        <input class="form-check-input" type="checkbox" id="goal8" value="Others" checked>
+                    {% else %}
+                        <input class="form-check-input" type="checkbox" id="goal8" value="Others">
+                    {% endif %}
+                    <label class="form-check-label" for="goal8">Others</label>
+                </div>
+            </div>
+                 
+            <div class="d-inline-flex w-100">
+                <button type="submit" class="btn" onclick="editFitnessDetails('{{ member.userId }}')">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeeditFitness()">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    
+
+    <!-- Required Js -->
+<script src="../static/assets/js/vendor-all.min.js"></script>
+<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../static/assets/js/pcoded.min.js"></script>
+<script src="../static/js/main.js"></script>
+
+<script>
+    function deleteMember(userId){
+        document.getElementsByClassName("pcoded-content")[0].style.opacity = '1';
+        $.ajax({
+            url: '../deletemember',  
+            type: 'POST', 
+            data: {'userId': userId}, 
+            success: function(response) {  
+                window.location.href = '../joinedmembers'    
+            }  
+        });
+    }
+
+    function openForm() {
+        document.getElementsByClassName("pcoded-content")[0].style.opacity = '0.3';
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementsByClassName("pcoded-content")[0].style.opacity = '1';
+        document.getElementById("myForm").style.display = "none";
+    }
+
+    function deleteForm2(){
+        document.getElementsByClassName("pcoded-content")[0].style.opacity = '0.3';
+        document.getElementById("deleteForm2").style.display = "block";
+    }
+
+    function closedeleteForm2(){
+        document.getElementsByClassName("pcoded-content")[0].style.opacity = '1';
+        document.getElementById("deleteForm2").style.display = "none";
+    }
+
+    function submitRenewalDetails(userId){
+        document.getElementsByClassName("pcoded-content")[0].style.opacity = '1';
+        packages = document.getElementById("package").value;
+        startdate = document.getElementById("startdate").value;
+        fees = document.getElementById("fees").value;
+
+        $.ajax({
+                // headers: {'X-CSRFToken': '{{ csrf_token }}'},
+                url: '../renewmember',  
+                type: 'POST', 
+                data: {'userId': userId, 'package': packages, 'startdate': startdate, 'fees': fees}, 
+                success: function(response) {  
+                    window.location.href = '../joinedmembers'       
+                }  
+        });
+    }
+
+    function editPersonal(){
+        document.getElementsByClassName("pcoded-content")[0].style.opacity = '0.3';
+        document.getElementById("editPersonalForm").style.display="block";
+    }
+
+    function closeeditPersonal(){
+        document.getElementsByClassName("pcoded-content")[0].style.opacity = '1';
+        document.getElementById("editPersonalForm").style.display="none";
+    }
+
+    function editPersonalDetails(userId){
+        document.getElementsByClassName("pcoded-content")[0].style.opacity = '1';
+        let formData1 = {};
+        formData1['Name'] = $('#memName').val();
+        formData1['Age'] = $('#memAge').val();
+        formData1['Contact'] = $('#memContact').val();
+        formData1['Email'] = $('#memEmail').val();
+        formData1['Address'] = $('#memAddress').val();
+        formData1['Gender'] = $('#memGender').val();
+        formData1['Emergency Contact'] = $('#memEmergency').val();
+        formData1['City'] = $('#memCity').val();
+        formData1['State'] = $('#memState').val();
+        formData1['Pincode'] = $('#memPincode').val();
+        formData1['Occupation'] = $('#memOccupation').val();
+        formData1['Blood Group'] = $('#membloodGroup').val();
+        formData1['Working Hours'] = $('#memworkingHours').val();
+        formData1['Sleeping Time'] = $('#memsleepingTime').val();
+        formData1['Mode'] = $('#memMode').val();
+        
+        $.ajax({
+            // headers: {'X-CSRFToken': '{{ csrf_token }}'},
+            url: '../editpersonaldetails',  
+            type: 'POST', 
+            data: {'user_id': userId, 'user_name': formData1['Name'], 'contact': formData1['Contact'], 'user_email': formData1['Email'], 'address': formData1['Address'],
+            'city': formData1['City'], 'state': formData1['State'], 'pincode': formData1['Pincode'], 'occupation': formData1['Occupation'], 'working_hours': formData1['Working Hours'],
+            'blood_group': formData1['Blood Group'], 'sleeping_time': formData1['Sleeping Time'], 'emergency': formData1['Emergency Contact'], 'age': formData1['Age'], 'gender': formData1['Gender'], 'mode': formData1['Mode']}, 
+            success: function(response) {  
+                window.location.reload();     
+            }  
+        });
+    }
+
+    function editFitness(){
+        document.getElementsByClassName("pcoded-content")[0].style.opacity = '0.3';
+        document.getElementById("editFitnessForm").style.display="block";
+    }
+
+    function closeeditFitness(){
+        document.getElementsByClassName("pcoded-content")[0].style.opacity = '1';
+        document.getElementById("editFitnessForm").style.display="none";
+    }
+
+    function fetchValues(idArr) {
+            let result = '';
+            for(let id in idArr) {
+                if($(idArr[id]).prop("checked")) {
+                    result = result + $(idArr[id]).prop("value") + ', ';
+                }
+            }
+            const len = result.length;
+            if(len && result.slice(-2) === ', ') {
+                return result.slice(0, len-2);
+            } else {
+                return '-';
+            }
+    }
+
+    function calculateBMI(w, h) {
+        let temp = Math.pow(Number(h)/100,2).toFixed(1);
+        return (Number(w)/temp).toFixed(1);
+    }
+
+    function editFitnessDetails(userId){
+        document.getElementsByClassName("pcoded-content")[0].style.opacity = '1';
+        let formData2 = {};
+        formData2['Height'] = $('#memHeight').val()
+        formData2['Weight'] = $('#memWeight').val()
+        height = parseInt($('#memHeight').val().split("cm")[0])
+        weight = parseInt($('#memWeight').val().split("kg")[0])
+        formData2['BMI'] = calculateBMI(weight, height);
+        formData2['attendedGym'] = $('#alreadyGymInput').val();
+        formData2['BPCheck'] = fetchValues(['#disease1', '#disease2', '#disease3']);
+        formData2['question1'] = fetchValues(['#backPain1', '#backPain2']); ;
+        formData2['question2'] = fetchValues(['#touch1', '#touch2']);
+        formData2['question3'] = fetchValues(['#smoke1', '#smoke2']);
+
+        if(formData2['question3'] === 'Yes') {
+            formData2['smokingHabit'] = $('#oftenInput').val();
+        }else{
+            formData2['smokingHabit'] = 'None'
+        }
+
+        formData2['question4'] = fetchValues(['#injury1', '#injury2']);
+        formData2['question5'] = fetchValues(['#sleep1', '#sleep2']);
+        formData2['physicalActivity'] = $('#exerciseLevelInput').val();
+
+        if(formData2['physicalActivity'] !== 'None') {
+            formData2['exerciseFrequency'] = $('#frequencyInput').val();
+            formData2['exerciseDuration'] = $('#durationInput').val();
+        }else{
+            formData2['exerciseFrequency'] = 'None'
+            formData2['exerciseDuration'] = 'None'
+        }
+
+        formData2['question6'] = fetchValues(['#medication1', '#medication2']);
+        formData2['fitnessGoal'] = fetchValues(['#goal1', '#goal2', '#goal3', '#goal4', '#goal5', '#goal6', '#goal7', '#goal8']);
+
+        $.ajax({
+                // headers: {'X-CSRFToken': '{{ csrf_token }}'},
+                url: '../editfitnessdetails',  
+                type: 'POST', 
+                // data: {'formData': formData2},
+                data: {'user_id': userId, 'height': formData2['Height'], 'weight': formData2['Weight'], 'BMI': formData2['BMI'], 'attendedGym': formData2['attendedGym'],
+                'BPCheck': formData2['BPCheck'], 'question1': formData2['question1'], 'question2': formData2['question2'], 'question3': formData2['question3'], 'smokingHabit': formData2['smokingHabit'],
+                'question4': formData2['question4'], 'question5': formData2['question5'], 'physicalActivity': formData2['physicalActivity'], 'exerciseFrequency': formData2['exerciseFrequency'], 'exerciseDuration': formData2['exerciseDuration'], 'question6': formData2['question6'], 'fitnessGoal': formData2['fitnessGoal']}, 
+                success: function(response) {  
+                    window.location.reload();     
+                }  
+        });
+    }
+</script>
+
+</body>
+</html>

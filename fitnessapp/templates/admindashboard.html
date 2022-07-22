@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bash Fitness</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, datta able, datta able bootstrap admin template, free admin theme, free dashboard template"/>
+    <meta name="author" content="CodedThemes"/>
+
+    <!-- Favicon icon -->
+    <link href="./static/img/favicon.png" rel="icon">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="./static/assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="./static/assets/plugins/animation/css/animate.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="./static/assets/css/style.css">
+
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<style>
+    .navbar-collapse .welcome_style{
+        padding-left: 33px;
+        padding-top: 30px;
+    }
+
+    @media (min-width:1200px){
+        .pcoded-navbar .mobile-menu span{
+            display: none;
+        }
+    }
+
+    .topnav {
+    overflow: hidden;
+    margin-bottom: 20px;
+    }
+
+    .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    }
+
+    .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    }
+
+    .topnav a.active {
+    background-color: #2196F3;
+    color: white;
+    }
+
+    .topnav .search-container {
+    float: left;
+    width: 100%;
+    }
+
+    .topnav input[type=text] {
+    padding: 11px;
+    margin-top: 8px;
+    font-size: 16px;
+    border: none;
+    }
+
+    .topnav .search-container button {
+    float: right;
+    padding: 9px 10px;
+    margin-top: 9px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    }
+
+    .topnav .search-container button:hover {
+    background: #ccc;
+    }
+
+    @media screen and (max-width: 600px) {
+    .topnav .search-container {
+        float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .topnav input[type=text] {
+        border: 1px solid #ccc;  
+    }
+    }
+    #search-button {
+        max-width: 40px;
+    }
+
+    .tab-content {
+        overflow-x: auto;
+    }
+
+    .package-details {
+        background-color: white;
+        box-shadow: 0 1px 20px 0 rgb(69 90 100 / 8%);
+    }
+    td, th {
+      text-align: center;
+      height: 30px;
+    }
+</style>
+
+<body>
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar">
+        <div class="navbar-wrapper">
+            <div class="navbar-brand header-logo">
+                <a href="index.html" class="b-brand">
+                    <img src="../../static/img/logo.png" style="height: 50px; width: 50px;">
+                    <span class="b-title">Bash Fitness</span>
+                </a>
+                <a class="mobile-menu" id="mobile-collapse"><span></span></a>
+            </div>
+            <div class="navbar-content scroll-div" style="margin-top: 25px;">
+                <ul class="nav pcoded-inner-navbar">
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Navigation</label>
+                    </li>
+                    <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item active">
+                        <a href="/dashboard" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Member Info</label>
+                    </li>
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item">
+                        <a href="pendingenquiries" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Pending Enquiries</span></a>
+                    </li>
+                    <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item">
+                        <a href="joinedmembers" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Joined Members</span></a>
+                    </li>
+                    <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a href="/addmember" class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext">Add Member</span></a>
+                    </li>
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Packages Info</label>
+                    </li>
+                    
+                    <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a href="/workouts" class="nav-link "><span class="pcoded-micon"><i class="feather icon-star"></i></span><span class="pcoded-mtext">Workouts list</span></a>
+                    </li>
+                    <li class="nav-item pcoded-menu-caption">
+                        <label></label>
+                    </li>
+                    <li data-username="" class="nav-item"><a href="/logout" class="nav-link"><span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Logout</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light">
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse1"><span></span></a>
+            <a href="index.html" class="b-brand">
+                <img src="../../static/img/logo.png" style="height: 50px; width: 50px;">
+                <span class="b-title">Bash Fitness</span>
+            </a>
+        </div>
+        <a class="mobile-menu" id="mobile-header">
+            <i class="feather icon-more-horizontal"></i>
+        </a>
+
+        <div class="collapse navbar-collapse">
+          <h3 style="padding-left: 33px;padding-top: 30px;">Welcome Admin !!</h3>
+        </div>
+    </header>
+    <!-- [ Header ] end -->
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="topnav">
+                            <div class="search-container">
+                              <div class="d-flex justify-content-end align-items-center">
+                                <p id="search-invalid" class="mt-3 text-danger"></p>&nbsp;
+                                <input type="text" placeholder="Search Member ID..." name="search" id="search-member">
+                                <button type="submit" id="search-button" onclick="memberSearch({{ memberId }})"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                          </div>
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <!--[ year  sales section ] starts-->
+                                <div class="col-md-12 col-xl-3">
+                                  <div class="card yearly-sales">
+                                      <div class="card-block">
+                                          <h6 class="mb-4">Pending Enquiries</h6>
+                                          <div class="row d-flex align-items-center">
+                                              <div class="col-9">
+                                                  <h3 class="f-w-300 d-flex align-items-center  m-b-0">{{ pendingCount }}</h3>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!--[ year  sales section ] end-->
+
+                               <!--[ year  sales section ] starts-->
+                               <div class="col-md-12 col-xl-3">
+                                <div class="card yearly-sales">
+                                    <div class="card-block">
+                                        <h6 class="mb-4">Members Joined in Total</h6>
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-9">
+                                                <h3 class="f-w-300 d-flex align-items-center  m-b-0">{{ memberCount }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--[ year  sales section ] end-->
+
+                                <!--[ year  sales section ] starts-->
+                                <div class="col-md-12 col-xl-3">
+                                  <div class="card yearly-sales">
+                                      <div class="card-block">
+                                          <h6 class="mb-4">Enquiries in Last Month</h6>
+                                          <div class="row d-flex align-items-center">
+                                              <div class="col-9">
+                                                {% if enquiry_up %}
+                                                  <h3 class="f-w-300 d-flex align-items-center  m-b-0"><i class="feather icon-arrow-up text-c-green f-30 m-r-10"></i>{{ enquiry_last_month }}</h3>
+                                                {% else %}
+                                                    <h3 class="f-w-300 d-flex align-items-center  m-b-0"><i class="feather icon-arrow-down text-c-red f-30 m-r-10"></i>{{ enquiry_last_month }}</h3>
+                                                {% endif %}
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!--[ year  sales section ] end-->
+                              
+                                <!--[ year  sales section ] starts-->
+                                <div class="col-md-12 col-xl-3">
+                                  <div class="card yearly-sales">
+                                      <div class="card-block">
+                                          <h6 class="mb-4">Members Joined in Last Month</h6>
+                                          <div class="row d-flex align-items-center">
+                                              <div class="col-9">
+                                                    {% if members_up %}
+                                                        <h3 class="f-w-300 d-flex align-items-center  m-b-0"><i class="feather icon-arrow-up text-c-green f-30 m-r-10"></i>{{ members_last_month }}</h3>
+                                                    {% else %}
+                                                        <h3 class="f-w-300 d-flex align-items-center  m-b-0"><i class="feather icon-arrow-down text-c-red f-30 m-r-10"></i>{{ members_last_month }}</h3>
+                                                    {% endif %}
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!--[ year  sales section ] end-->
+
+                                <div class="row w-100 my-5">
+                                    <div class="col-lg-8">
+                                        <div class="w-100 text-center">
+                                            <h4>Enquiries - Last 6 months</h4>
+                                        </div>
+                                        <canvas id="myChart"></canvas>
+                                    </div>
+                                    <div class="col-lg-4 p-3">
+                                        <div class="w-100 h-100 package-details">
+                                            <div class="w-100 py-3 text-center">
+                                                <h5>Package Details</h5>
+                                            </div>
+                                            <div class="d-flex justify-content-center" style="overflow-y: auto; max-height: 200px;">
+                                                <table class="table table-bordered" border="1" style="width: 80%;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>List</th>
+                                                        </tr>
+                                                       {% for item in packages %}
+                                                        <tr>
+                                                            <td>{{item.package}}</td>
+                                                        </tr>
+                                                       {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="p-3">
+                                                <div class="input-group mb-3" style="background: none;">
+                                                    <p class="my-auto">Add:&nbsp;</p>
+                                                    <input type="text" class="form-control" placeholder="package" id="package_text">
+                                                    <input type="text" class="form-control" placeholder="month" id="month">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-outline-secondary" type="button" style="margin-right: 8px;margin-left: 8px;" onclick="addPackage()">Add</button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="input-group mb-3" style="background: none;">
+                                                    <p class="my-auto">Delete:&nbsp;</p>
+                                                    <select for="package" class="form-control" name="package" id="package_input">
+                                                        {% for packages in packages %}
+                                                            <option value="{{ packages.package }}">{{ packages.package }}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-outline-secondary" type="button" style="margin-right: 8px;margin-left: 8px;" onclick="deletePackage()">Delete</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- [ rating list ] end-->
+                                <div class="col-xl-12 col-md-12 m-b-30">
+                                    <div class="w-100 d-flex justify-content-center my-2">
+                                        <h4>Plan expiry</h4>
+                                    </div>
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Today</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active show" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">This Week</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Member ID</th>
+                                                        <th>Username</th>
+                                                        <th>Contact</th>
+                                                        <th>Package Selected</th>
+                                                        <th>End date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% for item in expiryToday %}
+                                                        <tr>
+                                                            <td>
+                                                                <h6 class="m-0 text-c-green">{{ item.memberId }}</h6>
+                                                            </td>
+                                                            <td>
+                                                                <i class="fa fa-user" aria-hidden="true"></i><h6 class="d-inline ml-2">{{ item.userName }}</h6>
+                                                            </td>
+                                                            <td>
+                                                                <h6 class="m-0">{{ item.contact }}</h6>
+                                                            </td>
+                                                            <td>
+                                                                <h6 class="m-0">{{ item.package }}</h6>
+                                                            </td>
+                                                            <td>
+                                                                <h6 class="m-0">{{ item.endDate }}</h6>
+                                                            </td>
+                                                            <td><a href="{% url 'enquirydetail' item.userId %}" class="label theme-bg text-white f-12">View Details</a></td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                        <div class="tab-pane fade active show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Member ID</th>
+                                                        <th>Username</th>
+                                                        <th>Contact</th>
+                                                        <th>Package Selected</th>
+                                                        <th>End date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% for item in expiryThisweek %}
+                                                        <tr>
+                                                            <td>
+                                                                <h6 class="m-0 text-c-green">{{ item.memberId }}</h6>
+                                                            </td>
+                                                            <td>
+                                                                <i class="fa fa-user" aria-hidden="true"></i><h6 class="d-inline ml-2">{{ item.userName }}</h6>
+                                                            </td>
+                                                            <td>
+                                                                <h6 class="m-0">{{ item.contact }}</h6>
+                                                            </td>
+                                                            <td>
+                                                                <h6 class="m-0">{{ item.package }}</h6>
+                                                            </td>
+                                                            <td>
+                                                                <h6 class="m-0">{{ item.endDate }}</h6>
+                                                            </td>
+                                                            <td><a href="{% url 'memberdetail' item.userId %}" class="label theme-bg text-white f-12">View Details</a></td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>User</th>
+                                                        <th>Activity</th>
+                                                        <th>Time</th>
+                                                        <th>Status</th>
+                                                        <th class="text-right"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <h6 class="m-0"><img class="rounded-circle  m-r-10" style="width:40px;" src="assets/images/user/avatar-3.jpg" alt="activity-user">Silje Larsen</h6>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="m-0">Dog the quick brown</h6>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="m-0">10:23 AM</h6>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="m-0 text-c-purple">Delayed</h6>
+                                                        </td>
+                                                        <td class="text-right"><i class="fas fa-circle text-c-purple f-10"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h6 class="m-0"><img class="rounded-circle m-r-10" style="width:40px;" src="assets/images/user/avatar-1.jpg" alt="activity-user">Ida Jorgensen</h6>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="m-0">The quick brown fox</h6>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="m-0">3:28 PM</h6>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="m-0 text-c-green">Done</h6>
+                                                        </td>
+                                                        <td class="text-right"><i class="fas fa-circle text-c-green f-10"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h6 class="m-0"><img class="rounded-circle  m-r-10" style="width:40px;" src="assets/images/user/avatar-2.jpg" alt="activity-user">Albert Andersen</h6>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="m-0">Jumps over the lazy</h6>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="m-0">2:37 PM</h6>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="m-0 text-c-red">Missed</h6>
+                                                        </td>
+                                                        <td class="text-right"><i class="fas fa-circle text-c-red f-10"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h6 class="m-0"><img class="rounded-circle  m-r-10" style="width:40px;" src="assets/images/user/avatar-1.jpg" alt="activity-user">Ida Jorgensen</h6>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="m-0">The quick brown fox</h6>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="m-0">4:28 PM</h6>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="m-0 text-c-green">Done</h6>
+                                                        </td>
+                                                        <td class="text-right"><i class="fas fa-circle text-c-green f-10"></i></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+    <!-- Required Js -->
+    <script src="./static/assets/js/vendor-all.min.js"></script>
+	<script src="./static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./static/assets/js/pcoded.min.js"></script>
+    <script src="../../static/js/dashboard.js"></script>
+    <script>
+        var xValues = {{ month_list }};
+        var yValues = {{ count_list }};
+        var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        
+        for(item in xValues){
+            xValues[item][0] = month[item]
+        }
+        new Chart("myChart", {
+          type: "line",
+          data: {
+            labels: xValues,
+            datasets: [{
+              fill: false,
+              lineTension: 0,
+              backgroundColor: "rgba(0,0,255,1.0)",
+              borderColor: "rgba(0,0,255,0.1)",
+              data: yValues
+            }]
+          },
+          options: {
+            legend: {display: false},
+            scales: {
+              yAxes: [{ticks: {min: 0, max:50}}],
+            }
+          }
+        });
+
+        function addPackage(){
+            package_name = $('#package_text').val();
+            month = $('#month').val();
+            $.ajax({
+                url: '../addpackage',  
+                type: 'POST', 
+                data:{'package': package_name, 'month': month},
+                success: function(response) {  
+                    window.location.href = "../dashboard"    
+                } 
+            });
+        }
+
+        function deletePackage(){
+            package_name = $('#package_input').val();
+            
+            $.ajax({
+                url: '../deletepackage',  
+                type: 'POST', 
+                data:{'package': package_name},
+                success: function(response) {  
+                    window.location.href = "../dashboard"    
+                } 
+            });
+        }
+    </script>
+
+</body>
+</html>
