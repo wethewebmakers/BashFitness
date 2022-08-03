@@ -1,0 +1,9 @@
+Django==3.1.7
+pymysql==1.0.2
+django-crontab==0.7.1
+django-cron
+python-dateutil
+responses
+clicksend-client
+APScheduler
+Pillow
